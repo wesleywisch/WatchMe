@@ -23,7 +23,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```
 # Clone este repositório
-$ git clone https://github.com/wesleywisch/Ignite-componentizando-a-aplicacao.git
+$ git clone https://github.com/wesleywisch/WatchMe.git
 
 # Instale as dependências
 $ yarn ou npm install
