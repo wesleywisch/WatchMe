@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { MovieProps } from '../App';
 import { MovieCard } from '../components/MovieCard';
 
@@ -30,3 +31,7 @@ export function Content(props: ContentProps) {
     </div>
   )
 }
+
+export const ContentMemo = memo(Content, (prevProps, nextProps) => {
+  return Object.is(prevProps, nextProps);
+})

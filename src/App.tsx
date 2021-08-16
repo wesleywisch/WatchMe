@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-
+import "regenerator-runtime/runtime.js";
 import { SideBar } from './components/SideBar';
 import { Content } from './components/Content';
 
 import { api } from './services/api';
 
 import './styles/global.scss';
+import { useCallback } from 'react';
 
 export interface GenreResponseProps {
   id: number;
@@ -48,9 +49,9 @@ export function App() {
     })
   }, [selectedGenreId]);
 
-  function handleClickButton(id: number) {
+  const handleClickButton = useCallback(async(id: number) => {
     setSelectedGenreId(id);
-  }
+  }, [])
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
